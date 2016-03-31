@@ -12,12 +12,12 @@ class OlxCrawlerSpider(CrawlSpider):
     name = 'olx_crawler'
     allowed_domains = ['olx.ro', 'imobiliare.ro']
     start_urls = [
-        #'http://olx.ro/imobiliare/apartamente-garsoniere-de-inchiriat/iasi_39939/?search%5Bprivate_business%5D=private&search%5Border%5D=created_at%3Adesc&search%5Bdist%5D=5',
+        'http://olx.ro/imobiliare/apartamente-garsoniere-de-inchiriat/iasi_39939/?search%5Bprivate_business%5D=private&search%5Border%5D=created_at%3Adesc&search%5Bdist%5D=5',
         'http://www.imobiliare.ro/inchirieri-apartamente/iasi'
     ]
 
     rules = [
-        #Rule(LinkExtractor(allow=r'imobiliare/apartamente-garsoniere-de-inchiriat/iasi_39939/\?search%5Bprivate_business%5D=private&search%5Border%5D=created_at%3Adesc&search%5Bdist%5D=5&page=[1-5]'), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=r'imobiliare/apartamente-garsoniere-de-inchiriat/iasi_39939/\?search%5Bprivate_business%5D=private&search%5Border%5D=created_at%3Adesc&search%5Bdist%5D=5&page=[1-5]'), callback='parse_item', follow=True),
         Rule(LinkExtractor(allow=r'http://www.imobiliare.ro/inchirieri-apartamente/iasi\?pagina=[1-5]'), callback='parse_imobiliare', follow=True)
     ]
 
