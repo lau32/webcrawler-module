@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'olx.spiders'
 ITEM_PIPELINES = ['olx.pipelines.MongoDBPipeline']
 #ITEM_PIPELINES = ['olx.pipelines.JsonWritterPipeline']
 
-MONGODB_SERVER = "192.168.99.101"
+MONGODB_SERVER = "192.168.99.100"
 MONGODB_PORT = 27017
 MONGODB_DB = "olxDB"
 MONGODB_COLLECTION = "rentals"
